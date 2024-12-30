@@ -1,10 +1,4 @@
-import {
-  Text,
-  Heading,
-  Box,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
+import { Text, Heading, Box, Flex, Image } from "@chakra-ui/react";
 import { FaRegClock, FaPlay } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 import ProfilePicture from "../../public/assets/images/UserProfilePicture.png";
@@ -94,7 +88,12 @@ export default function Playlist() {
           <Box height={"1.5px"} bgColor={"gray.600"}></Box>
           <Box pt={"16px"}>
             {playList.songs.map((item, index) => (
-              <SongCard song={item} index={index} />
+              <SongCard
+                ID={playList.ID}
+                song={item}
+                index={index}
+                Role={playList.role}
+              />
             ))}
           </Box>
         </Box>

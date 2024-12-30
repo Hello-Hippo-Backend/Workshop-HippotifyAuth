@@ -48,4 +48,5 @@ function App() {
   );
 }
 
-export default authMiddleware(App);
+// export default authMiddleware(App);
+export default App;
